@@ -43,5 +43,8 @@ class DetailActivity : AppCompatActivity() {
             startActivity(move)
         }
 
+        binding.btnBack.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
     }
 }

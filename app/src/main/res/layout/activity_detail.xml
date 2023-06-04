@@ -20,6 +20,18 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/img_business" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_back"
+            app:layout_goneMarginTop="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Back"
+            app:icon="@drawable/round_arrow_back_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/txt_source"
             android:layout_width="wrap_content"
