@@ -12,25 +12,25 @@ interface GeneralApi {
 
 interface BusinessApi {
     @GET("top-headlines?country=us&category=business&apiKey?")
-    fun getGeneral(@Query("apiKey") api_key:String) : Call<News>
+    fun getBusiness(@Query("apiKey") api_key:String) : Call<News>
 }
 
 interface EntertainmentApi {
     @GET("top-headlines?country=us&category=entertainment&apiKey?")
-    fun getGeneral(@Query("apiKey") api_key:String) : Call<News>
+    fun getEntertainment(@Query("apiKey") api_key:String) : Call<News>
 }
 
 interface HealthApi {
     @GET("top-headlines?country=us&category=health&apiKey?")
-    fun getGeneral(@Query("apiKey") api_key:String) : Call<News>
+    fun getHealth(@Query("apiKey") api_key:String) : Call<News>
 }
 
 interface SportApi {
     @GET("top-headlines?country=us&category=sport&apiKey?")
-    fun getGeneral(@Query("apiKey") api_key:String) : Call<News>
+    fun getSport(@Query("apiKey") api_key:String) : Call<News>
 }
 
 interface TechnologyApi {
     @GET("top-headlines?country=us&category=technology&apiKey?")
-    fun getGeneral(@Query("apiKey") api_key:String) : Call<News>
+    fun getTechnology(@Query("apiKey") api_key:String) : Call<News>
 }
