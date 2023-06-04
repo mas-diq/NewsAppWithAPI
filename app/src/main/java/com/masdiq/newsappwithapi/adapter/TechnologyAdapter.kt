@@ -35,8 +35,8 @@ class TechnologyAdapter : RecyclerView.Adapter<TechnologyAdapter.ViewHolder>() {
             .into(holder.technologyBinding.newsImage)
         with(holder.technologyBinding) {
             newsTitle.text = technologyList[position].title
-            newsAuthor.text = technologyList[position].title
-            newsPublished.text = technologyList[position].title
+            newsAuthor.text = technologyList[position].author
+            newsPublished.text = technologyList[position].source!!.name
         }
         holder.itemView.setOnClickListener {
             val activity = holder.itemView.context as Activity
