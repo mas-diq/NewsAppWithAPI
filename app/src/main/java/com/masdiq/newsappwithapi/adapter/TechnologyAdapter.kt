@@ -31,7 +31,7 @@ class TechnologyAdapter : RecyclerView.Adapter<TechnologyAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: TechnologyAdapter.ViewHolder, position: Int) {
         Glide.with(holder.itemView)
-            .load(technologyList[position].title)
+            .load(technologyList[position].urlToImage)
             .into(holder.technologyBinding.newsImage)
         with(holder.technologyBinding) {
             newsTitle.text = technologyList[position].title

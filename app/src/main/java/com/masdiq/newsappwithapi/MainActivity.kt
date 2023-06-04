@@ -53,5 +53,11 @@ class MainActivity : AppCompatActivity() {
             val move = Intent(this, TechnologyActivity::class.java)
             startActivity(move)
         }
+
+        binding.imgGit.setOnClickListener() {
+            val move = Intent(this, WebViewActivity::class.java)
+            move.putExtra("link", "https://github.com/mas-diq")
+            startActivity(move)
+        }
     }
 }
