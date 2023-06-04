@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginHorizontal="24dp"
+    android:paddingHorizontal="24dp"
     tools:context=".MainActivity">
 
     <TextView
@@ -58,7 +58,7 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="4dp"
                 android:layout_marginVertical="2dp"
@@ -94,7 +94,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="4dp"
                 android:layout_marginVertical="2dp"
@@ -148,7 +148,7 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="4dp"
                 android:layout_marginVertical="2dp"
@@ -184,7 +184,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="4dp"
                 android:layout_marginVertical="2dp"
@@ -238,47 +238,11 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="4dp"
                 android:layout_marginVertical="2dp"
                 android:layout_marginEnd="8dp"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                app:cardCornerRadius="24dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/img_sport"
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/img_sport" />
-
-                    <TextView
-                        android:id="@+id/txt_sport"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="4dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:text="Sport"
-                        android:textAlignment="center" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="4dp"
-                android:layout_marginVertical="2dp"
-                android:layout_marginStart="8dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 app:cardCornerRadius="24dp">
@@ -308,32 +272,15 @@
                         android:textAlignment="center" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/lay_4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lay_3">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
                 android:layout_marginVertical="2dp"
+                android:layout_marginStart="8dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:paddingHorizontal="2dp"
                 app:cardCornerRadius="24dp">
 
                 <LinearLayout
@@ -343,25 +290,45 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/img_git"
+                        android:id="@+id/img_sport"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="80dp"
                         android:layout_weight="1"
                         android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/img_git" />
+                        app:srcCompat="@drawable/img_sport" />
 
                     <TextView
-                        android:id="@+id/txt_git"
+                        android:id="@+id/txt_sport"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="4dp"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_medium"
-                        android:text="Open Github"
+                        android:text="Sport"
                         android:textAlignment="center" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lay_3">
+
+        <Button
+            android:id="@+id/button_github"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Show On Github"
+            android:textSize="20sp" />
     </LinearLayout>
 
 

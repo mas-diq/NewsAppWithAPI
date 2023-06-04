@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.masdiq.newsappwithapi.WebViewActivity
+import com.masdiq.newsappwithapi.DetailActivity
 import com.masdiq.newsappwithapi.databinding.NewsLayoutBinding
 import com.masdiq.newsappwithapi.model.Result
 
@@ -37,8 +37,15 @@ class EntertainmentAdapter : RecyclerView.Adapter<EntertainmentAdapter.ViewHolde
         }
         holder.itemView.setOnClickListener {
             val activity = holder.itemView.context as Activity
-            val move = Intent(activity, WebViewActivity::class.java)
-            move.putExtra("list", entertainmentList[position].url)
+            val move = Intent(activity, DetailActivity::class.java)
+            move.putExtra("img", entertainmentList[position].urlToImage.toString())
+            move.putExtra("source", entertainmentList[position].source!!.name)
+            move.putExtra("author", entertainmentList[position].author)
+            move.putExtra("title", entertainmentList[position].title)
+            move.putExtra("desc", entertainmentList[position].description.toString())
+            move.putExtra("content", entertainmentList[position].content.toString())
+            move.putExtra("published", entertainmentList[position].publishedAt)
+            move.putExtra("link", entertainmentList[position].url)
             activity.startActivity(move)
         }
     }

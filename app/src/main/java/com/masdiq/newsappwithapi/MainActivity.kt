@@ -54,9 +54,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(move)
         }
 
-        binding.imgGit.setOnClickListener() {
+        binding.buttonGithub.setOnClickListener() {
             val move = Intent(this, WebViewActivity::class.java)
-            move.putExtra("link", "https://github.com/mas-diq")
+            move.putExtra("link", "https://github.com/mas-diq/VIX-Schoters-Muhammad-Shiddiq-Fathullah")
             startActivity(move)
         }
     }

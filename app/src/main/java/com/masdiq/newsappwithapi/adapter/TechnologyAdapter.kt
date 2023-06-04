@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.masdiq.newsappwithapi.WebViewActivity
+import com.masdiq.newsappwithapi.DetailActivity
 import com.masdiq.newsappwithapi.databinding.NewsLayoutBinding
 import com.masdiq.newsappwithapi.model.Result
 
@@ -40,7 +40,14 @@ class TechnologyAdapter : RecyclerView.Adapter<TechnologyAdapter.ViewHolder>() {
         }
         holder.itemView.setOnClickListener {
             val activity = holder.itemView.context as Activity
-            val move = Intent(activity, WebViewActivity::class.java)
+            val move = Intent(activity, DetailActivity::class.java)
+            move.putExtra("img", technologyList[position].urlToImage.toString())
+            move.putExtra("source", technologyList[position].source!!.name)
+            move.putExtra("author", technologyList[position].author)
+            move.putExtra("title", technologyList[position].title)
+            move.putExtra("desc", technologyList[position].description.toString())
+            move.putExtra("content", technologyList[position].content.toString())
+            move.putExtra("published", technologyList[position].publishedAt)
             move.putExtra("link", technologyList[position].url)
             activity.startActivity(move)
         }
