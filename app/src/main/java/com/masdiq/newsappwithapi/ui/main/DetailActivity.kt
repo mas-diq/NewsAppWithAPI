@@ -1,4 +1,4 @@
-package com.masdiq.newsappwithapi
+package com.masdiq.newsappwithapi.ui.main
 
 import android.content.Intent
 import android.os.Bundle
@@ -23,7 +23,6 @@ class DetailActivity : AppCompatActivity() {
         val author = intent.extras?.getString("author") ?: "Null"
         val title = intent.extras?.getString("title") ?: "Null"
         val desc = intent.extras?.getString("desc") ?: "Null"
-        val content = intent.extras?.getString("content") ?: "Null"
         val published = intent.extras?.getString("published") ?: "Null"
         val data = intent.extras?.getString("link") ?: "Null"
 
@@ -35,7 +34,6 @@ class DetailActivity : AppCompatActivity() {
             txtAuthor.text = author
             txtTitle.text = title
             txtDesc.text = desc
-            txtContent.text = content
             txtPublished.text = published
         }
 

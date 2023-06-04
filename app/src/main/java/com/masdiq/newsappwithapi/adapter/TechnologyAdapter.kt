@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.masdiq.newsappwithapi.DetailActivity
+import com.masdiq.newsappwithapi.ui.main.DetailActivity
 import com.masdiq.newsappwithapi.databinding.NewsLayoutBinding
 import com.masdiq.newsappwithapi.model.Result
 
@@ -46,7 +46,6 @@ class TechnologyAdapter : RecyclerView.Adapter<TechnologyAdapter.ViewHolder>() {
             move.putExtra("author", technologyList[position].author)
             move.putExtra("title", technologyList[position].title)
             move.putExtra("desc", technologyList[position].description.toString())
-            move.putExtra("content", technologyList[position].content.toString())
             move.putExtra("published", technologyList[position].publishedAt)
             move.putExtra("link", technologyList[position].url)
             activity.startActivity(move)

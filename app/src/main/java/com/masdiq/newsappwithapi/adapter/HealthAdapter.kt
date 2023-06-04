@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.masdiq.newsappwithapi.DetailActivity
+import com.masdiq.newsappwithapi.ui.main.DetailActivity
 import com.masdiq.newsappwithapi.databinding.NewsLayoutBinding
 import com.masdiq.newsappwithapi.model.Result
 
@@ -43,7 +43,6 @@ class HealthAdapter : RecyclerView.Adapter<HealthAdapter.ViewHolder>() {
             move.putExtra("author", healthList[position].author)
             move.putExtra("title", healthList[position].title)
             move.putExtra("desc", healthList[position].description.toString())
-            move.putExtra("content", healthList[position].content.toString())
             move.putExtra("published", healthList[position].publishedAt)
             move.putExtra("link", healthList[position].url)
             activity.startActivity(move)

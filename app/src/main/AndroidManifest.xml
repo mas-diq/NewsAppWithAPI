@@ -16,7 +16,7 @@
         android:theme="@style/Theme.NewsAppWithAPI"
         tools:targetApi="31">
         <activity
-            android:name=".DetailActivity"
+            android:name=".ui.main.DetailActivity"
             android:exported="false" />
         <activity
             android:name=".ui.HealthActivity"
@@ -37,10 +37,10 @@
             android:name=".ui.GeneralActivity"
             android:exported="false" />
         <activity
-            android:name=".WebViewActivity"
+            android:name=".ui.main.WebViewActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,15 +1,14 @@
 package com.masdiq.newsappwithapi.ui
 
 import android.os.Bundle
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.masdiq.newsappwithapi.adapter.BusinessAdapter
-import com.masdiq.newsappwithapi.adapter.GeneralAdapter
 import com.masdiq.newsappwithapi.databinding.ActivityBusinessBinding
 import com.masdiq.newsappwithapi.viewmodel.BusinessViewModel
-import com.masdiq.newsappwithapi.viewmodel.GeneralViewModel
 
 class BusinessActivity : AppCompatActivity() {
 
@@ -29,6 +28,10 @@ class BusinessActivity : AppCompatActivity() {
         viewModel.observeBusinessLiveData().observe(this, Observer { newsList ->
             businessAdapter.setBusinessList(newsList)
         })
+
+        binding.btnBack.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
     }
 
     private fun prepareRecyclerView() {

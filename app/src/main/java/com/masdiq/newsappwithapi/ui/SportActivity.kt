@@ -1,6 +1,7 @@
 package com.masdiq.newsappwithapi.ui
 
 import android.os.Bundle
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -27,6 +28,10 @@ class SportActivity : AppCompatActivity() {
         viewModel.observeSportLiveData().observe(this, Observer { newsList ->
             sportAdapter.setSportList(newsList)
         })
+
+        binding.btnBack.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
     }
 
     private fun prepareRecyclerView() {

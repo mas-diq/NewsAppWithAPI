@@ -1,6 +1,7 @@
 package com.masdiq.newsappwithapi.ui
 
 import android.os.Bundle
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -27,6 +28,10 @@ class TechnologyActivity : AppCompatActivity() {
         viewModel.observeTechnologyLiveData().observe(this, Observer { newsList ->
             technologyAdapter.setTechnologyList(newsList)
         })
+
+        binding.btnBack.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
     }
 
     private fun prepareRecyclerView() {

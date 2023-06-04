@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".DetailActivity">
+    tools:context=".ui.main.DetailActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -71,18 +71,6 @@
             app:layout_constraintTop_toBottomOf="@id/txt_title" />
 
         <TextView
-            android:id="@+id/txt_content"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/montserrat_regular"
-            android:text="I revisited the Google Pixel 7 Pro half a year after it launched to see if its any smarter. It is but not exactly in the ways that Google wants it to be.\r\nByAllison Johnson, a reviewer with 10 years"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txt_desc" />
-
-        <TextView
             android:id="@+id/txt_published"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -92,7 +80,7 @@
             android:text="2023-06-03T13:00:00Z"
             android:textColor="@color/purple"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_content" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_desc" />
 
         <Button
             android:id="@+id/button"

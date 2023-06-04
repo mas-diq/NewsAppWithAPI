@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.masdiq.newsappwithapi.DetailActivity
+import com.masdiq.newsappwithapi.ui.main.DetailActivity
 import com.masdiq.newsappwithapi.databinding.NewsLayoutBinding
 import com.masdiq.newsappwithapi.model.Result
 
@@ -43,7 +43,6 @@ class BusinessAdapter : RecyclerView.Adapter<BusinessAdapter.ViewHolder>() {
             move.putExtra("author", businessList[position].author)
             move.putExtra("title", businessList[position].title)
             move.putExtra("desc", businessList[position].description.toString())
-            move.putExtra("content", businessList[position].content.toString())
             move.putExtra("published", businessList[position].publishedAt)
             move.putExtra("link", businessList[position].url)
             activity.startActivity(move)

@@ -27,6 +27,10 @@ class EntertainmentActivity : AppCompatActivity() {
         viewModel.observeEntertainmentLiveData().observe(this, Observer { newsList ->
             entertainmentAdapter.setEntertainmentList(newsList)
         })
+
+        binding.btnBack.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
     }
 
     private fun prepareRecyclerView() {

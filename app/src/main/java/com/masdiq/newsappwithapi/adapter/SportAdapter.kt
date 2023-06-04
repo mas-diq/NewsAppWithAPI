@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.masdiq.newsappwithapi.DetailActivity
+import com.masdiq.newsappwithapi.ui.main.DetailActivity
 import com.masdiq.newsappwithapi.databinding.NewsLayoutBinding
 import com.masdiq.newsappwithapi.model.Result
 
@@ -43,7 +43,6 @@ class SportAdapter : RecyclerView.Adapter<SportAdapter.ViewHolder>() {
             move.putExtra("author", sportList[position].author)
             move.putExtra("title", sportList[position].title)
             move.putExtra("desc", sportList[position].description.toString())
-            move.putExtra("content", sportList[position].content.toString())
             move.putExtra("published", sportList[position].publishedAt)
             move.putExtra("link", sportList[position].url)
             activity.startActivity(move)

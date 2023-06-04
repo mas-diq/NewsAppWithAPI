@@ -1,4 +1,4 @@
-package com.masdiq.newsappwithapi
+package com.masdiq.newsappwithapi.ui.main
 
 import android.content.Intent
 import android.os.Bundle

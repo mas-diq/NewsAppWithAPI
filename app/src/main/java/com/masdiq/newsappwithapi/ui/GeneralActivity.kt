@@ -27,6 +27,10 @@ class GeneralActivity : AppCompatActivity() {
         viewModel.observeGeneralLiveData().observe(this, Observer { newsList ->
             generalAdapter.setGeneralList(newsList)
         })
+
+        binding.btnBack.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
     }
 
     private fun prepareRecyclerView() {
